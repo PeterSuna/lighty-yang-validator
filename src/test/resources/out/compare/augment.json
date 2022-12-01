@@ -1,0 +1,347 @@
+{
+  "module": {
+    "prefix": "aug",
+    "contact": "",
+    "name": "augment",
+    "namespace": "urn:ietf:params:xml:ns:yang:augment",
+    "description": "",
+    "revision": "2022-11-30"
+  },
+  "augments": [
+    {
+      "path": "/mo:data-container/mo:list-data/",
+      "children": [{
+        "path": "/mo:data-container/mo:list-data/aug:month/",
+        "type_info": {
+          "description": "",
+          "type": "string"
+        },
+        "children": [],
+        "name": "month",
+        "description": "",
+        "config": true,
+        "class": "leaf",
+        "status": "CURRENT"
+      }],
+      "name": "/mo:data-container/mo:list-data/",
+      "description": "",
+      "config": true,
+      "class": "augmentation",
+      "status": "CURRENT"
+    },
+    {
+      "path": "/mo:data-container/mo:list-data/",
+      "children": [{
+        "path": "/mo:data-container/mo:list-data/aug:sub-device/",
+        "type_info": {},
+        "children": [
+          {
+            "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:type/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "type",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:year/",
+            "type_info": {
+              "description": "",
+              "type": "uint8"
+            },
+            "children": [],
+            "name": "year",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:state/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "state",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          }
+        ],
+        "name": "sub-device",
+        "description": "",
+        "config": true,
+        "class": "list",
+        "status": "CURRENT"
+      }],
+      "name": "/mo:data-container/mo:list-data/",
+      "description": "",
+      "config": true,
+      "class": "augmentation",
+      "status": "CURRENT"
+    },
+    {
+      "path": "/mo:data-container/",
+      "children": [{
+        "path": "/mo:data-container/aug:device/",
+        "type_info": {},
+        "children": [{
+          "path": "/mo:data-container/aug:device/aug:enumType/",
+          "type_info": {
+            "description": "",
+            "type": "aug:enumeration"
+          },
+          "children": [],
+          "name": "enumType",
+          "description": "",
+          "config": true,
+          "class": "leaf",
+          "status": "CURRENT"
+        }],
+        "name": "device",
+        "description": "",
+        "config": true,
+        "class": "container",
+        "status": "CURRENT"
+      }],
+      "name": "/mo:data-container/",
+      "description": "",
+      "config": true,
+      "class": "augmentation",
+      "status": "CURRENT"
+    },
+    {
+      "path": "/mo:data-container/aug:device/",
+      "children": [{
+        "path": "/mo:data-container/aug:device/aug:model/",
+        "type_info": {
+          "description": "",
+          "type": "string"
+        },
+        "children": [],
+        "name": "model",
+        "description": "",
+        "config": true,
+        "class": "leaf",
+        "status": "CURRENT"
+      }],
+      "name": "/mo:data-container/aug:device/",
+      "description": "",
+      "config": true,
+      "class": "augmentation",
+      "status": "CURRENT"
+    },
+    {
+      "path": "/mo:data-container/aug:device/",
+      "children": [{
+        "path": "/mo:data-container/aug:device/aug:manufacture/",
+        "type_info": {
+          "description": "",
+          "type": "string"
+        },
+        "children": [],
+        "name": "manufacture",
+        "description": "",
+        "config": true,
+        "class": "leaf",
+        "status": "CURRENT"
+      }],
+      "name": "/mo:data-container/aug:device/",
+      "description": "",
+      "config": true,
+      "class": "augmentation",
+      "status": "CURRENT"
+    }
+  ]
+}
+{
+  "children": [{
+    "path": "/mo:data-container/",
+    "type_info": {},
+    "children": [
+      {
+        "path": "/mo:data-container/mo:list-data/",
+        "type_info": {},
+        "children": [
+          {
+            "path": "/mo:data-container/mo:list-data/mo:name/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "name",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/mo:list-data/mo:year/",
+            "type_info": {
+              "description": "",
+              "type": "int8"
+            },
+            "children": [],
+            "name": "year",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/mo:list-data/aug:month/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "month",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/mo:list-data/aug:sub-device/",
+            "type_info": {},
+            "children": [
+              {
+                "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:type/",
+                "type_info": {
+                  "description": "",
+                  "type": "string"
+                },
+                "children": [],
+                "name": "type",
+                "description": "",
+                "config": true,
+                "class": "leaf",
+                "status": "CURRENT"
+              },
+              {
+                "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:year/",
+                "type_info": {
+                  "description": "",
+                  "type": "uint8"
+                },
+                "children": [],
+                "name": "year",
+                "description": "",
+                "config": true,
+                "class": "leaf",
+                "status": "CURRENT"
+              },
+              {
+                "path": "/mo:data-container/mo:list-data/aug:sub-device/aug:state/",
+                "type_info": {
+                  "description": "",
+                  "type": "string"
+                },
+                "children": [],
+                "name": "state",
+                "description": "",
+                "config": true,
+                "class": "leaf",
+                "status": "CURRENT"
+              }
+            ],
+            "name": "sub-device",
+            "description": "",
+            "config": true,
+            "class": "list",
+            "status": "CURRENT"
+          }
+        ],
+        "name": "list-data",
+        "description": "",
+        "config": true,
+        "class": "list",
+        "status": "CURRENT"
+      },
+      {
+        "path": "/mo:data-container/mo:country/",
+        "type_info": {
+          "description": "",
+          "type": "string"
+        },
+        "children": [],
+        "name": "country",
+        "description": "",
+        "config": true,
+        "class": "leaf",
+        "status": "CURRENT"
+      },
+      {
+        "path": "/mo:data-container/aug:device/",
+        "type_info": {},
+        "children": [
+          {
+            "path": "/mo:data-container/aug:device/aug:enumType/",
+            "type_info": {
+              "description": "",
+              "type": "aug:enumeration"
+            },
+            "children": [],
+            "name": "enumType",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/aug:device/aug:model/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "model",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          },
+          {
+            "path": "/mo:data-container/aug:device/aug:manufacture/",
+            "type_info": {
+              "description": "",
+              "type": "string"
+            },
+            "children": [],
+            "name": "manufacture",
+            "description": "",
+            "config": true,
+            "class": "leaf",
+            "status": "CURRENT"
+          }
+        ],
+        "name": "device",
+        "description": "",
+        "config": true,
+        "class": "container",
+        "status": "CURRENT"
+      }
+    ],
+    "name": "data-container",
+    "description": "",
+    "config": true,
+    "class": "container",
+    "status": "CURRENT"
+  }],
+  "module": {
+    "prefix": "mo",
+    "contact": "",
+    "name": "model",
+    "namespace": "urn:ietf:params:xml:ns:yang:model",
+    "description": "",
+    "revision": "2022-11-30"
+  }
+}

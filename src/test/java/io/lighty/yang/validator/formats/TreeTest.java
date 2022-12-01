@@ -100,6 +100,11 @@ public class TreeTest extends FormatTest {
         runTreeTest("testModel.tree");
     }
 
+    @Override
+    public void runAugmentation() throws Exception {
+        runTreeTest("augment.tree");
+    }
+
     private void runTreeTest(final String comapreWithFileName) throws Exception {
         final Path outLog = Paths.get(this.outPath).resolve("out.log");
         final String fileCreated = FileUtils.readFileToString(outLog.toFile(), "utf-8");

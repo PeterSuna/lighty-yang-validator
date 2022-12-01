@@ -1,0 +1,56 @@
+module augment {
+  yang-version 1.1;
+  namespace "urn:ietf:params:xml:ns:yang:augment";
+  prefix aug;
+
+  import model {prefix mo;}
+
+  revision 2022-11-30 {
+    description
+      "Initial revision.";
+  }
+
+  augment "/mo:data-container/mo:list-data" {
+    leaf month {
+      type string;
+    }
+  }
+
+  augment "/mo:data-container/mo:list-data" {
+    list sub-device {
+      key type;
+      unique "state";
+      leaf type {
+          type string;
+      }
+      leaf year {
+        type uint8;
+      }
+      leaf state {
+        type string;
+      }
+    }
+  }
+
+  augment "/mo:data-container" {
+    container device {
+      leaf enumType {
+        type enumeration {
+            enum "ethernet";
+            enum atm;
+        }
+      }
+      must "ifType != 'ethernet'";
+    }
+  }
+  augment "/mo:data-container/aug:device" {
+    leaf model {
+      type string;
+    }
+  }
+  augment "/mo:data-container/aug:device" {
+    leaf manufacture {
+      type string;
+    }
+  }
+}

@@ -50,6 +50,11 @@ public class JsonTreeTest extends FormatTest {
         runJsonTreeTest("testModel.json");
     }
 
+    @Override
+    public void runAugmentation() throws Exception {
+        runJsonTreeTest("augment.json");
+    }
+
     private void runJsonTreeTest(final String comapreWithFileName) throws Exception {
         final Path outLog = Paths.get(this.outPath).resolve("out.log");
         final String fileCreated = FileUtils.readFileToString(outLog.toFile(), "utf-8");

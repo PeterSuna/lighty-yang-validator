@@ -108,6 +108,15 @@ public abstract class FormatTest implements Cleanable {
         runCustomModuleTest();
     }
 
+    @Test
+    public void testAugmentation() throws Exception {
+        setFormat();
+        final String module = Paths.get(this.yangPath).resolve("augment/model@2022-11-30.yang").toString();
+        final String augment = Paths.get(this.yangPath).resolve("augment/augment@2022-11-30.yang").toString();
+        runLYV(ImmutableList.of(module, augment), this.builder.build(), this.formatter);
+        runAugmentation();
+    }
+
     public abstract void setFormat();
 
     public abstract void runInterfacesTest() throws Exception;
@@ -119,5 +128,7 @@ public abstract class FormatTest implements Cleanable {
     public abstract void runRoutingTest() throws Exception;
 
     public abstract void runCustomModuleTest() throws Exception;
+
+    public abstract void runAugmentation() throws Exception;
 
 }

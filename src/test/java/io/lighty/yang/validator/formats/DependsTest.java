@@ -118,6 +118,11 @@ public class DependsTest extends FormatTest {
         runDependendsTest("testModel-dependencies");
     }
 
+    @Override
+    public void runAugmentation() throws Exception {
+        // NOOP
+    }
+
     private void runDependendsTest(final String comapreWithFileName) throws Exception {
         final Path outLog = Paths.get(this.outPath).resolve("out.log");
         final String fileCreated = FileUtils.readFileToString(outLog.toFile(), "utf-8");

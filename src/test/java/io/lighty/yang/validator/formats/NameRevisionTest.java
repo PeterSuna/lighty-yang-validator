@@ -50,6 +50,11 @@ public class NameRevisionTest extends FormatTest {
         runNameRevisionTest("testModel-name-revision");
     }
 
+    @Override
+    public void runAugmentation() throws Exception {
+        // NOOP
+    }
+
     private void runNameRevisionTest(final String comapreWithFileName) throws Exception {
         final Path outLog = Paths.get(this.outPath).resolve("out.log");
         final String fileCreated = FileUtils.readFileToString(outLog.toFile(), "utf-8");

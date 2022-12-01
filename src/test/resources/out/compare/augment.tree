@@ -1,0 +1,19 @@
+module: augment
+augment /mo:data-container/mo:list-data:
+  +--rw month?       string
+  +--rw sub-device* [type]
+     +--rw type?       string
+     +--rw year?       uint8
+     +--rw state?       string
+augment /mo:data-container:
+  +--rw device
+     +--rw enumType?       enumeration
+augment /mo:data-container/device:
+  +--rw model?       string
+  +--rw manufacture?       string
+module: model
+  +--rw data-container
+     +--rw list-data* [name]
+     |  +--rw name       string
+     |  +--rw year?       int8
+     +--rw country?       string
